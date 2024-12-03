@@ -7,6 +7,7 @@
   --footer-color: #1e1f24;
   --number-color: #80828d;
   --light-black: #1e1f24;
+  --line-color: #674292;
 }
 
 body {
@@ -14,7 +15,23 @@ body {
 }
 /* Start Header */
 .header {
-  border-bottom: 2px solid #e6e6e6;
+  position: relative; /* تأكيد أن الهيدر يتم التحكم به */
+  z-index: 10; /* الهيدر أعلى */
+  background-color: #fff; /* إضافة لون خلفية للتأكد من تغطية الشكل */
+}
+
+.shape-container {
+  position: absolute; /* تثبيت الشكل بالنسبة للصفحة */
+  z-index: 1; /* أسفل الهيدر */
+  top: -60px; /* ضبط الموضع لتتناسب مع التصميم */
+  right: -30px;
+  width: 300px;
+}
+
+@media (max-width: 767px) {
+  .shape-container {
+    display: none;
+  }
 }
 
 .fade-in {
@@ -67,58 +84,137 @@ body {
 }
 /* End Header */
 
-/* Start Service Section-1 */
+/* Start Main Banner  */
+.btn-log {
+  width: 70%;
+}
+
+.text-container p {
+  font-weight: 550;
+}
+
 .main-banner {
-  text-align: center;
+  text-align: end;
   padding: 60px 20px;
 }
 
-@media (max-width: 767px) {
-    .shape-container {
-        display: none;
-    }
+.line-left {
+  position: absolute;
+  width: 12px; /* عرض الخط */
+  height: 130px; /* طول الخط */
+  background-color: var(--line-color); /* لون الخط */
+  border-radius: 50px; /* الزوايا الدائرية */
 }
+
+.line-left {
+  left: 80px; /* المسافة من اليسار */
+  top: 87%; /* التمركز عمودياً */
+  transform: translateY(-50%);
+}
+
+.circle {
+  position: absolute;
+  width: 15px; /* حجم الدائرة */
+  height: 15px;
+  background-color: var(--line-color); /* لون الدائرة */
+  border-radius: 50%; /* لجعل الشكل دائرياً */
+}
+
+.circle.top {
+  top: -20px; /* وضع الدائرة فوق الخط */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle.bottom {
+  bottom: -20px; /* وضع الدائرة أسفل الخط */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* End Main Banner */
+
+/* Start Service Section */
+.service-text {
+  font-weight: 600;
+  font-size: 3.5rem;
+}
+
+.service-p-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
 .services {
   text-align: center;
   padding: 60px 20px;
 }
 .service-item {
-  border: 1px solid #e6e6e6;
+  height: 100%; 
+  border: 2px solid #e6e6e6;
   padding: 20px;
   border-radius: 8px;
-  background: #fff;
+  width: 90%;
+  background: var(--white-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .service-item h5 {
   font-size: 24px;
+  font-weight: 600;
+}
+
+.service-item p {
+  font-size: 20px;
 }
 
 .services .service-item {
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 10px; 
+  border-radius: 10px;
   overflow: hidden;
 }
 
 .services .service-item:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  border: none;
 }
 
 .services .service-item img {
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .services .service-item:hover img {
-  transform: scale(1.1);    
+  transform: scale(1.1);
 }
-
 /* End Main Section-1 */
+
+@media (max-width: 767px) {
+    .shape-container-1, .shape-container-2 {
+        display: none;
+    } 
+}
+.shape-container-1 {
+  position: absolute; 
+  z-index: 1;
+  top: 32%;
+  right: 0px;
+  width: 300px;
+}
 
 /* Section Start About */
 .text-end {
   text-align: right; /* لتنسيق النص ليكون على اليمين */
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.about-us-section {
+    margin-top: 20%;
+    padding: 60px 20px;
+    margin-bottom: 1%;
 }
 
 .about-us-section .row {
@@ -139,21 +235,38 @@ body {
 
 /* تنسيق الأرقام */
 .about-us-section h5 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   color: var(--number-color);
 }
 
 .about-us-section h2 {
+    font-size: 2.5rem;
   color: var(--purble-color);
   font-weight: 500;
 }
 
-/* تنسيق الفقرات */
 .about-us-section p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--light-black);
   font-weight: 500;
+}
+
+.background-circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(128, 0, 128, 0.1); /* لون أرجواني شفاف */
+    border-radius: 50%;
+    top: 90px;
+    left: 100px;
+    z-index: -1; /* للخلفية خلف المحتوى */
+}
+
+.shap_circle {
+    position: absolute;
+    top: 70%;
+    right: 10%;
 }
 
 /* لضمان الاستجابة على الشاشات الصغيرة */
@@ -180,16 +293,73 @@ body {
   margin-bottom: 5px;
 }
 
+.shape-container-2 {
+    position: absolute; 
+    z-index: 1;
+    top: 72%;
+    right: 0%;
+    width: 300px;
+}
+
+.shape-container-3 {
+    position: absolute; 
+    z-index: 1;
+    top: 71%;
+    left: 0%;
+    width: 300px;
+}
+
 /* Form Section */
 .contact-section {
+    margin-top: 20%;
   padding: 60px 20px;
 }
 
+/* تنسيق الحقول على نفس السطر */
+.form-container .d-flex {
+    display: flex;
+    justify-content: space-between; /* يجعل الحقول تتوزع بالتساوي */
+}
+
+.form-container .form-group {
+    flex: 1; /* تعيين العرض المتساوي بين الحقول */
+}
+
+.form-control::placeholder {
+    color: #999999;
+}
+
+.form-container .form-group input {
+    width: 100%;
+}
+
+.contact-image {
+  margin-right: 25%;
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  background: rgba(128, 0, 128, 0.1); /* لون أرجواني شفاف */
+  border-radius: 50%;
+  top: -315px;
+  z-index: -1;
+}
+
+.shap_circle-1 {
+    position: absolute;
+    top: -250%;
+    right: 40%;
+}
+
+.shap_circle-2 {
+    position: absolute;
+    top: -170%;
+    left: -9%;
+}
 
 @media (max-width: 767px) {
-    .contact-image {
-        display: none;
-    }
+  .contact-image {
+    display: none;
+  }
 }
 
 .submit-btn {
@@ -281,27 +451,27 @@ body {
 }
 
 @media (max-width: 767px) {
-    .container-1::before {
-        content: "";
-        width: 450px;
-        height: 2px;
-        position: absolute;
-        background-color: #f0ebe3;
-        left: 50%;
-        transform: translateX(-50%) translateY(-3900%);
-      }
+  .container-1::before {
+    content: "";
+    width: 450px;
+    height: 2px;
+    position: absolute;
+    background-color: #f0ebe3;
+    left: 50%;
+    transform: translateX(-50%) translateY(-3900%);
+  }
 }
 
 @media (min-width: 767px) and (max-width: 1300px) {
-    .container-1::before {
-        content: "";
-        width: 1250px;
-        height: 2px;
-        position: absolute;
-        background-color: #f0ebe3;
-        left: 50%;
-        transform: translateX(-50%) translateY(-3900%);
-      }
+  .container-1::before {
+    content: "";
+    width: 1250px;
+    height: 2px;
+    position: absolute;
+    background-color: #f0ebe3;
+    left: 50%;
+    transform: translateX(-50%) translateY(-3900%);
+  }
 }
 
 /* end footer */

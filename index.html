@@ -6,6 +6,7 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/all.min.css" />
+
     <!-- css file -->
     <link rel="stylesheet" href="css/shafra.css" />
     <!-- remix icons -->
@@ -76,56 +77,57 @@
       </div>
     </header>
 
+    <div class="shape-container">
+      <img src="image/Shaps.png" alt="Decorative Shape" class="img-fluid" />
+    </div>
+
     <!-- Main Banner -->
     <section class="main-banner mb-5 pt-5 pb-5 d-flex align-items-center py-5">
-      <div
-        class="container mt-5 pt-5 pb-5 d-flex flex-wrap align-items-center justify-content-between"
-      >
+      <div class="line-left">
+        <div class="circle top"></div>
+        <div class="circle bottom"></div>
+      </div>
+
+      <div class="container mt-5 pt-5 pb-5 d-flex flex-wrap align-items-center">
         <div class="image-container text-center mb-4 mb-md-0">
           <img
             src="image/Shaps (1).png"
             alt="Image"
-            class="img-fluid"
-            style="max-width: 350px; height: auto"
+            class="img-fluid img_"
+            style="width: 500px"
           />
         </div>
-        <div class="text-container text-center text-md-right">
-          <h2 class="fw-bold head_text mb-5">
+        <div class="text-container text-end me-5 mt-5">
+          <p class="head_text mb-4 fs-2">
             الحياة صارت أسهل... مع شفرة، نظامك <br />
             المتكامل لإدارة الصالون وتنظيم المواعيد!
-          </h2>
-          <a href="#" class="btn btn-primary btn-lg w-50">سجل معنا</a>
+          </p>
+          <a href="#" class="btn btn-primary btn-log fw-bold btn-lg"
+            >سجل معنا</a
+          >
         </div>
-      </div>
-
-      <div class="shape-container w-50 position-absolute">
-        <img
-          src="image/Shaps.png"
-          alt="Decorative Shape"
-          class="img-fluid"
-          style="width: 150px; top: -318px; right: -50px; position: absolute"
-        />
       </div>
     </section>
 
     <!-- Services Section -->
     <section class="services">
       <div class="container">
-        <h2 class="fw-bold mb-0 fs-1">الـخـدمـات</h2>
-        <p class="mb-5 fs-5">كل شيء تحت السيطرة !</p>
+        <h2 class="mb-0 service-text">الـخـدمـات</h2>
+        <p class="mb-5 service-p-text">كل شيء تحت السيطرة !</p>
 
-        <div class="row">
+        <div class="row gx-5 gy-5">
           <div class="col-md-4 mb-3">
             <div class="service-item">
               <img
                 src="image/icon/time.png"
                 alt="الخدمة 1"
                 style="width: 50px"
+                class="mb-3"
               />
-              <h5 class="mt-3 fw-bold">إدارة المواعيد</h5>
+              <h5 class="mt-3 mb-4">إدارة المواعيد</h5>
               <p>
                 تمكن من تنظيم المواعيد بكفاءة عالية لضمان تلبية احتياجات عملائك
-                في الوقت المحدد، <br> دون تعارض أو تأخير.
+                في الوقت المحدد، دون تعارض أو تأخير.
               </p>
             </div>
           </div>
@@ -136,11 +138,12 @@
                 src="image/icon/human_resource.png"
                 alt="الخدمة 2"
                 style="width: 50px"
+                class="mb-3"
               />
-              <h5 class="mt-3 fw-bold">إدارة موارد بشرية</h5>
+              <h5 class="mt-3 mb-4">إدارة موارد بشرية</h5>
               <p>
                 إدارة متكاملة لشؤون الموظفين، تشمل تنظيم الجداول، تتبع الأداء،
-                وتحليل البيانات لضمان تحسين <br> الإنتاجية.
+                وتحليل البيانات لضمان تحسين الإنتاجية.
               </p>
             </div>
           </div>
@@ -151,8 +154,9 @@
                 src="image/icon/stock.png"
                 alt="الخدمة 3"
                 style="width: 50px"
+                class="mb-3"
               />
-              <h5 class="mt-3 fw-bold">إدارة مخزون</h5>
+              <h5 class="mt-3 mb-4">إدارة مخزون</h5>
               <p>
                 نظام متقدم لمراقبة المخزون يوفر تحكمًا كاملًا في المواد
                 والمستلزمات، مما يضمن استمرارية العمليات وتقليل الفاقد.
@@ -166,11 +170,12 @@
                 src="image/icon/money.png"
                 alt="الخدمة 3"
                 style="width: 50px"
+                class="mb-3"
               />
-              <h5 class="mt-3 fw-bold">إدارة مالية</h5>
+              <h5 class="mt-3 mb-4">إدارة مالية</h5>
               <p>
                 تحليل مالي شامل يتيح لك مراقبة الإيرادات والمصروفات بدقة، مع
-                توفير تقارير تساعد في اتخاذ قرارات <br> مالية مستنيرة.
+                توفير تقارير تساعد في اتخاذ قرارات مالية مستنيرة.
               </p>
             </div>
           </div>
@@ -181,11 +186,12 @@
                 src="image/icon/crm.png"
                 alt="الخدمة 3"
                 style="width: 50px"
+                class="mb-3"
               />
-              <h5 class="mt-3 fw-bold">إدارة العملاء CRM</h5>
+              <h5 class="mt-3 mb-4">إدارة العملاء CRM</h5>
               <p>
-                نظام إدارة علاقات العملاء مصمم لتخزين وتحليل <br> بيانات العملاء،
-                لتعزيز ولاء <br> عملاءك.
+                نظام إدارة علاقات العملاء مصمم لتخزين وتحليل بيانات العملاء
+                لتعزيز ولاء عملاءك.
               </p>
             </div>
           </div>
@@ -196,8 +202,9 @@
                 src="image/icon/bill.png"
                 alt="الخدمة 3"
                 style="width: 50px"
+                class="mb-3"
               />
-              <h5 class="mt-3 fw-bold">الفواتير الإلكترونية</h5>
+              <h5 class="mt-3 mb-4">الفواتير الإلكترونية</h5>
               <p>
                 مع الفواتير الإلكترونية، يمكنك تتبع جميع المعاملات بدقة. تساعدك
                 هذه الخدمة في إدارة حساباتك وتحليل بياناتك المالية بسهولة.
@@ -206,15 +213,35 @@
           </div>
         </div>
       </div>
+      <div class="line-left">
+        <div class="circle top"></div>
+        <div class="circle bottom"></div>
+      </div>
     </section>
     <!-- Services Section End -->
 
+    <div class="shape-container-1">
+      <img
+        src="image/Shap (2).png"
+        alt="Decorative Shape"
+        class="img-fluid"
+        style="transform: scaleX(-1)"
+      />
+    </div>
+
     <!-- Section Start About -->
     <section class="about-us-section container">
-        
       <!-- First Section -->
       <div class="row align-items-center flex-row-reverse">
         <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="background-circle">
+            <img
+              src="image/Shap (3).png"
+              class="shap_circle"
+              style="right: 60%"
+              alt=""
+            />
+          </div>
           <img
             src="image/Mac1.png"
             alt="Astronaut in space"
@@ -224,13 +251,19 @@
         <div class="col-lg-6 text-end">
           <h5>01</h5>
           <h2 class="about-us-title mb-4">إدارة الموظفین:</h2>
-          <p>تحكم بشفتات ومواعید موظفیك بشكل <br> سھل وأبسط.</p>
+          <p>
+            تحكم بشفتات ومواعید موظفیك بشكل <br />
+            سھل وأبسط.
+          </p>
         </div>
       </div>
 
       <!-- Second Section -->
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="background-circle" style="left: 25%">
+            <img src="image/Shap (3).png" class="shap_circle" alt="" />
+          </div>
           <img
             src="image/Mac1.png"
             alt="Astronaut in space"
@@ -241,13 +274,24 @@
         <div class="col-lg-6 text-end">
           <h5>02</h5>
           <h2 class="about-us-title mb-4">إدارة الحجوزات:</h2>
-          <p>ما راح یفوتك أي موعد! مع شفرة، نظم مواعید <br> عملائك بسھولة وسلاسة.</p>
+          <p>
+            ما راح یفوتك أي موعد! مع شفرة، نظم مواعید <br />
+            عملائك بسھولة وسلاسة.
+          </p>
         </div>
       </div>
 
       <!-- Third Section -->
       <div class="row align-items-center flex-row-reverse">
         <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="background-circle">
+            <img
+              src="image/Shap (3).png"
+              class="shap_circle"
+              style="right: 60%"
+              alt=""
+            />
+          </div>
           <img
             src="image/Mac1.png"
             alt="Astronaut in space"
@@ -258,8 +302,8 @@
           <h5>03</h5>
           <h2 class="about-us-title mb-4">التقاریر الیومیة:</h2>
           <p>
-            تعبت من ادارة المخزون بالطريقة التقليدية؟ <br> لاتشيل هم، منصتنا تحل لك
-            المشكلة.
+            تعبت من ادارة المخزون بالطريقة التقليدية؟ <br />
+            لاتشيل هم، منصتنا تحل لك المشكلة.
           </p>
         </div>
       </div>
@@ -267,6 +311,9 @@
       <!-- Fourth Section -->
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="background-circle" style="left: 25%">
+            <img src="image/Shap (3).png" class="shap_circle" alt="" />
+          </div>
           <img
             src="image/Mac1.png"
             alt="Astronaut in space"
@@ -278,38 +325,49 @@
           <h5>04</h5>
           <h2 class="about-us-title mb-4">دعم على مدار الساعة:</h2>
           <p>
-            مع شفرة، فریق الدعم جاھز 24/7 لأي استفسار <br> أو مساعدة تحتاجھا في أي
-            وقت.
+            مع شفرة، فریق الدعم جاھز 24/7 لأي استفسار <br />
+            أو مساعدة تحتاجھا في أي وقت.
           </p>
         </div>
       </div>
     </section>
+
+    <div class="shape-container-3">
+      <img src="image/Shap (2).png" alt="Decorative Shape" class="img-fluid" />
+    </div>
+
+    <div class="shape-container-2">
+      <img src="image/Shap (1).png" alt="Decorative Shape" class="img-fluid" />
+    </div>
 
     <!-- Form Section -->
     <section class="contact-section container">
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="form-container">
-            <h3 class="text-center me-0 fw-bold mb-4">خلك قريب وتواصل معنا</h3>
+            <h3 class="text-end me-0 mb-4">خلك قريب وتواصل معنا</h3>
             <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">الاسم</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  placeholder="الاسم"
-                />
+              <div class="mb-3 d-flex justify-content-between">
+                <div class="form-group ms-3">
+                  <label for="name" class="form-label">الاسم</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="الاسم"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">رقم التواصل</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="+966 | 00 000 0000"
+                  />
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">رقم التواصل</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="+966 | 00 000 0000"
-                />
-              </div>
+
               <div class="mb-3">
                 <label for="email" class="form-label">البريد الإلكتروني</label>
                 <input
@@ -328,14 +386,19 @@
                   placeholder="اسم الصالون"
                 />
               </div>
-              <button type="submit" class="submit-btn w-50">إرسال</button>
+              <button type="submit" class="submit-btn  w-50">إرسال</button>
             </form>
           </div>
         </div>
 
         <!-- Image Section -->
-        <div class="col-lg-6 position-relative text-center mb-5 mb-lg-0">
+        <div class="col-lg-6 position-relative mb-lg-0">
           <img src="image/man.png" alt="صورة شخص" class="contact-image" />
+          <div>
+            <img src="image/Shap (3).png" alt="" class="shap_circle-1">
+            <img src="image/Shap (3).png" alt="" class="shap_circle-2">
+            <img src="image/Shap (3).png" alt="" class="shap_circle-3">
+          </div>
         </div>
       </div>
     </section>
