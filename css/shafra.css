@@ -1,0 +1,239 @@
+:root {
+  --nav-text: #62636c;
+  --white-color: #ffffff;
+  --purble-color: #674292;
+  --black-color: #000;
+  --text-purble: #7469b6;
+  --footer-color: #1e1f24;
+  --number-color: #80828d;
+  --light-black: #1e1f24;
+}
+
+body {
+  font-family: "Noto Sans Arabic", sans-serif;
+}
+/* Start Header */
+.header {
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-nav .nav-link a {
+  color: var(--nav-text);
+}
+.navbar-nav .nav-link:hover {
+  color: var(--purble-color);
+}
+
+.nav-underline {
+  color: var(--purble-color);
+}
+
+.head_text {
+  color: var(--black-color);
+  font-size: 40px;
+}
+
+.btn {
+  border: none;
+  background-color: var(--purble-color);
+  color: var(--white-color);
+}
+.btn:hover {
+  color: var(--purble-color);
+  background-color: var(--white-color);
+  box-shadow: 0 0 20px #9a9a9a70;
+}
+
+.btn-link {
+  font-size: 20px;
+  color: var(--text-purble);
+}
+.btn-link:hover {
+  color: var(--nav-text);
+}
+/* End Header */
+
+/* Start Main Section-1 */
+.main-banner {
+  text-align: center;
+  padding: 60px 20px;
+}
+.services {
+  text-align: center;
+  padding: 60px 20px;
+}
+.service-item {
+  border: 1px solid #e6e6e6;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.service-item h5 {
+  font-size: 24px;
+}
+/* End Main Section-1 */
+
+/* Section Start About */
+.text-end {
+  text-align: right; /* لتنسيق النص ليكون على اليمين */
+}
+
+.about-us-section .row {
+  margin-bottom: 40px;
+}
+
+/* النصوص موجهة لليمين */
+.about-us-section .text-end {
+  text-align: right;
+}
+
+/* تنسيق العناوين */
+.about-us-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* تنسيق الأرقام */
+.about-us-section h5 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--number-color);
+}
+
+.about-us-section h2 {
+  color: var(--purble-color);
+  font-weight: 500;
+}
+
+/* تنسيق الفقرات */
+.about-us-section p {
+  font-size: 1rem;
+  color: var(--light-black);
+  font-weight: 500;
+}
+
+/* لضمان الاستجابة على الشاشات الصغيرة */
+@media (max-width: 767px) {
+  .about-us-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-us-section .astronaut-img {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .about-us-section .col-lg-6 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.about-us-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Form Section */
+.contact-section {
+  padding: 60px 20px;
+}
+
+.submit-btn {
+  background-color: #6f42c1;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--white-color);
+  color: var(--purble-color);
+  box-shadow: 0 0 20px #9a9a9a70;
+}
+
+/* footer */
+.footer {
+  background-color: var(--footer-color);
+  color: var(--white-color);
+  text-align: center;
+  padding: 20px 0;
+}
+.text-link {
+  color: #e6c7f6;
+  font-weight: 500;
+}
+
+.links ul li {
+  color: var(--white-color);
+}
+
+.footer a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.icon-container {
+  display: inline-block;
+  width: 50px; /* يمكن تعديل الحجم حسب الحاجة */
+  height: 50px; /* يمكن تعديل الحجم حسب الحاجة */
+  border: 1px solid #e6c7f6; /* سمك ولون الإطار */
+  border-radius: 50%;
+  background-color: transparent; /* لون الخلفية الداكن */
+  color: #d3b3ff; /* لون الأيقونات البنفسجي الفاتح */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-container:hover {
+  background-color: var(--purble-color);
+  border: none;
+}
+
+.icon-container i {
+  font-size: 24px; /* يمكن تعديل حجم الأيقونات حسب الحاجة */
+}
+
+.footer .contact a {
+  color: #e6c7f6;
+}
+
+.container-1,
+.activitie ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-1::before {
+  content: "";
+  width: 1250px;
+  height: 2px;
+  position: absolute;
+  background-color: #f0ebe3;
+  left: 50%; /* ضع النقطة المرجعية للخط في المنتصف */
+  transform: translateX(-50%) translateY(-3900%);
+}
+/* end footer */
