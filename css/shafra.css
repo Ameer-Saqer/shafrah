@@ -35,19 +35,21 @@ body {
   color: var(--purble-color);
 }
 
-.nav-underline {
-  color: var(--purble-color);
-}
-
 .head_text {
   color: var(--black-color);
   font-size: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-login {
+  transition: all 0.3s ease-in-out;
 }
 
 .btn {
   border: none;
   background-color: var(--purble-color);
   color: var(--white-color);
+  transition: all 0.3s ease-in-out;
 }
 .btn:hover {
   color: var(--purble-color);
@@ -58,16 +60,23 @@ body {
 .btn-link {
   font-size: 20px;
   color: var(--text-purble);
+  transition: all 0.3s ease-in-out;
 }
 .btn-link:hover {
   color: var(--nav-text);
 }
 /* End Header */
 
-/* Start Main Section-1 */
+/* Start Service Section-1 */
 .main-banner {
   text-align: center;
   padding: 60px 20px;
+}
+
+@media (max-width: 767px) {
+    .shape-container {
+        display: none;
+    }
 }
 .services {
   text-align: center;
@@ -83,6 +92,28 @@ body {
 .service-item h5 {
   font-size: 24px;
 }
+
+.services .service-item {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px; 
+  overflow: hidden;
+}
+
+.services .service-item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+  cursor: pointer;
+}
+
+.services .service-item img {
+  transition: transform 0.3s ease; 
+}
+
+.services .service-item:hover img {
+  transform: scale(1.1);    
+}
+
 /* End Main Section-1 */
 
 /* Section Start About */
@@ -154,6 +185,13 @@ body {
   padding: 60px 20px;
 }
 
+
+@media (max-width: 767px) {
+    .contact-image {
+        display: none;
+    }
+}
+
 .submit-btn {
   background-color: #6f42c1;
   color: #ffffff;
@@ -185,6 +223,11 @@ body {
 
 .links ul li {
   color: var(--white-color);
+  transition: all 0.3s ease-in-out;
+}
+.links ul li:hover {
+  cursor: pointer;
+  color: var(--purble-color);
 }
 
 .footer a {
@@ -236,4 +279,29 @@ body {
   left: 50%; /* ضع النقطة المرجعية للخط في المنتصف */
   transform: translateX(-50%) translateY(-3900%);
 }
+
+@media (max-width: 767px) {
+    .container-1::before {
+        content: "";
+        width: 450px;
+        height: 2px;
+        position: absolute;
+        background-color: #f0ebe3;
+        left: 50%;
+        transform: translateX(-50%) translateY(-3900%);
+      }
+}
+
+@media (min-width: 767px) and (max-width: 1300px) {
+    .container-1::before {
+        content: "";
+        width: 1250px;
+        height: 2px;
+        position: absolute;
+        background-color: #f0ebe3;
+        left: 50%;
+        transform: translateX(-50%) translateY(-3900%);
+      }
+}
+
 /* end footer */
