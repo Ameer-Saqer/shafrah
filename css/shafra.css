@@ -16,8 +16,9 @@ body {
 /* Start Header */
 .header {
   position: relative; /* تأكيد أن الهيدر يتم التحكم به */
-  z-index: 10; /* الهيدر أعلى */
-  background-color: #fff; /* إضافة لون خلفية للتأكد من تغطية الشكل */
+  z-index: 10;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .shape-container {
@@ -150,7 +151,7 @@ body {
   padding: 60px 20px;
 }
 .service-item {
-  height: 100%; 
+  height: 100%;
   border: 2px solid #e6e6e6;
   padding: 20px;
   border-radius: 8px;
@@ -192,12 +193,14 @@ body {
 /* End Main Section-1 */
 
 @media (max-width: 767px) {
-    .shape-container-1, .shape-container-2 {
-        display: none;
-    } 
+  .shape-container-1,
+  .shape-container-2 {
+    display: none;
+  }
 }
+
 .shape-container-1 {
-  position: absolute; 
+  position: absolute;
   z-index: 1;
   top: 32%;
   right: 0px;
@@ -212,9 +215,9 @@ body {
 }
 
 .about-us-section {
-    margin-top: 20%;
-    padding: 60px 20px;
-    margin-bottom: 1%;
+  margin-top: 20%;
+  padding: 60px 20px;
+  margin-bottom: 1%;
 }
 
 .about-us-section .row {
@@ -241,7 +244,7 @@ body {
 }
 
 .about-us-section h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
   color: var(--purble-color);
   font-weight: 500;
 }
@@ -253,20 +256,20 @@ body {
 }
 
 .background-circle {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: rgba(128, 0, 128, 0.1); /* لون أرجواني شفاف */
-    border-radius: 50%;
-    top: 90px;
-    left: 100px;
-    z-index: -1; /* للخلفية خلف المحتوى */
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(128, 0, 128, 0.1); /* لون أرجواني شفاف */
+  border-radius: 50%;
+  top: 90px;
+  left: 100px;
+  z-index: -1; /* للخلفية خلف المحتوى */
 }
 
 .shap_circle {
-    position: absolute;
-    top: 70%;
-    right: 10%;
+  position: absolute;
+  top: 70%;
+  right: 10%;
 }
 
 /* لضمان الاستجابة على الشاشات الصغيرة */
@@ -294,43 +297,43 @@ body {
 }
 
 .shape-container-2 {
-    position: absolute; 
-    z-index: 1;
-    top: 72%;
-    right: 0%;
-    width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: 72%;
+  right: 0%;
+  width: 300px;
 }
 
 .shape-container-3 {
-    position: absolute; 
-    z-index: 1;
-    top: 71%;
-    left: 0%;
-    width: 300px;
+  position: absolute;
+  z-index: 1;
+  top: 71%;
+  left: 0%;
+  width: 300px;
 }
 
 /* Form Section */
 .contact-section {
-    margin-top: 20%;
+  margin-top: 20%;
   padding: 60px 20px;
 }
 
 /* تنسيق الحقول على نفس السطر */
 .form-container .d-flex {
-    display: flex;
-    justify-content: space-between; /* يجعل الحقول تتوزع بالتساوي */
+  display: flex;
+  justify-content: space-between; /* يجعل الحقول تتوزع بالتساوي */
 }
 
 .form-container .form-group {
-    flex: 1; /* تعيين العرض المتساوي بين الحقول */
+  flex: 1; /* تعيين العرض المتساوي بين الحقول */
 }
 
 .form-control::placeholder {
-    color: #999999;
+  color: #999999;
 }
 
 .form-container .form-group input {
-    width: 100%;
+  width: 100%;
 }
 
 .contact-image {
@@ -345,15 +348,15 @@ body {
 }
 
 .shap_circle-1 {
-    position: absolute;
-    top: -250%;
-    right: 40%;
+  position: absolute;
+  top: -250%;
+  right: 40%;
 }
 
 .shap_circle-2 {
-    position: absolute;
-    top: -170%;
-    left: -9%;
+  position: absolute;
+  top: -170%;
+  left: -9%;
 }
 
 @media (max-width: 767px) {
@@ -407,12 +410,12 @@ body {
 
 .icon-container {
   display: inline-block;
-  width: 50px; /* يمكن تعديل الحجم حسب الحاجة */
-  height: 50px; /* يمكن تعديل الحجم حسب الحاجة */
-  border: 1px solid #e6c7f6; /* سمك ولون الإطار */
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e6c7f6;
   border-radius: 50%;
-  background-color: transparent; /* لون الخلفية الداكن */
-  color: #d3b3ff; /* لون الأيقونات البنفسجي الفاتح */
+  background-color: transparent;
+  color: #d3b3ff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,13 +429,12 @@ body {
 }
 
 .icon-container i {
-  font-size: 24px; /* يمكن تعديل حجم الأيقونات حسب الحاجة */
+  font-size: 24px;
 }
 
 .footer .contact a {
   color: #e6c7f6;
 }
-
 .container-1,
 .activitie ul li {
   display: flex;
@@ -446,7 +448,7 @@ body {
   height: 2px;
   position: absolute;
   background-color: #f0ebe3;
-  left: 50%; /* ضع النقطة المرجعية للخط في المنتصف */
+  left: 50%;
   transform: translateX(-50%) translateY(-3900%);
 }
 
@@ -474,4 +476,37 @@ body {
   }
 }
 
+.icon-container {
+  color: #6c757d; /* لون الأيقونات */
+  transition: color 0.3s ease; /* تأثير التحويل عند التمرير */
+}
+
+.icon-container:hover {
+  color: #0d6efd; /* تغيير اللون عند التمرير */
+}
+
+.contact ul {
+  justify-content: flex-end;
+}
+
 /* end footer */
+
+/* @media (max-width: 767px) {
+
+} */
+
+/* @media (min-width: 768px) {
+
+} */
+
+/* Medium */
+
+/* @media (min-width: 992px) {
+
+} */
+
+/* Large */
+
+/* @media (min-width: 1200px) {
+
+} */
