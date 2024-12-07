@@ -15,19 +15,35 @@ body {
 }
 /* Start Header */
 .header {
-  position: relative; /* تأكيد أن الهيدر يتم التحكم به */
+  position: relative;
   z-index: 10;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* [dir = "ltr"] .logo img{
+  transform: scaleX(-1);
+} */
+
 .shape-container {
-  position: absolute; /* تثبيت الشكل بالنسبة للصفحة */
-  z-index: 1; /* أسفل الهيدر */
-  top: -60px; /* ضبط الموضع لتتناسب مع التصميم */
+  position: absolute;
+  z-index: 1;
+  top: -60px;
   right: -30px;
   width: 300px;
 }
+
+[dir="ltr"] .shape-container {
+  position: absolute;
+  z-index: 1;
+  top: -60px; 
+  left: 0px;
+  width: 300px;
+  direction: ltr;
+}
+[dir="ltr"] .shape-container img{
+  transform: scaleX(-1);
+} 
 
 @media (max-width: 767px) {
   .shape-container {
@@ -53,10 +69,18 @@ body {
   color: var(--purble-color);
 }
 
+[dir="ltr"] .navbar-nav {
+  text-align: left;
+  direction: ltr;
+}
+
 .head_text {
   color: var(--black-color);
   font-size: 40px;
   transition: all 0.3s ease-in-out;
+  text-align: right;
+  font-weight: 600;
+  font-size: 2.4rem;
 }
 
 .btn-login {
@@ -88,10 +112,40 @@ body {
 /* Start Main Banner  */
 .btn-log {
   width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+}
+
+[dir="ltr"] .btn-log {
+  text-align: center;
+  direction: ltr;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.text-container { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  direction: rtl;
+  margin-right: 5rem;
+  margin-top: 5rem;
 }
 
 .text-container p {
   font-weight: 550;
+}
+
+[dir="ltr"] .text-container{
+  align-items: flex-start; 
+  text-align: left;
+  direction: ltr;
+  margin-left: 5rem;
+  margin-right: 0;
 }
 
 .main-banner {
@@ -101,34 +155,34 @@ body {
 
 .line-left {
   position: absolute;
-  width: 12px; /* عرض الخط */
-  height: 130px; /* طول الخط */
-  background-color: var(--line-color); /* لون الخط */
-  border-radius: 50px; /* الزوايا الدائرية */
+  width: 12px;
+  height: 130px;
+  background-color: var(--line-color);
+  border-radius: 50px;
 }
 
 .line-left {
-  left: 80px; /* المسافة من اليسار */
-  top: 87%; /* التمركز عمودياً */
+  left: 80px;
+  top: 87%;
   transform: translateY(-50%);
 }
 
 .circle {
   position: absolute;
-  width: 15px; /* حجم الدائرة */
+  width: 15px;
   height: 15px;
-  background-color: var(--line-color); /* لون الدائرة */
-  border-radius: 50%; /* لجعل الشكل دائرياً */
+  background-color: var(--line-color);
+  border-radius: 50%;
 }
 
 .circle.top {
-  top: -20px; /* وضع الدائرة فوق الخط */
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .circle.bottom {
-  bottom: -20px; /* وضع الدائرة أسفل الخط */
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -208,11 +262,6 @@ body {
 }
 
 /* Section Start About */
-.text-end {
-  text-align: right; /* لتنسيق النص ليكون على اليمين */
-  font-weight: 600;
-  font-size: 2.4rem;
-}
 
 .about-us-section {
   margin-top: 20%;
@@ -222,6 +271,10 @@ body {
 
 .about-us-section .row {
   margin-bottom: 40px;
+}
+
+[dir = "ltr"] .about-us-section .about_text {
+  text-align: left;
 }
 
 /* النصوص موجهة لليمين */
@@ -255,15 +308,36 @@ body {
   font-weight: 500;
 }
 
+[dir = "ltr"] .background-circle {
+  transform: scaleX(-1);
+}
+
+[dir = "ltr"] .astronaut-img {
+  transform: scaleX(-1);
+}
+
+[dir = "ltr"] .img_ltr_1 {
+  margin-left: -8%;
+  margin-top: 5%;
+}
+
+[dir = "ltr"] .img_ltr {
+  margin-left: 22%;
+}
+
+[dir = "ltr"] .shape-container-2 {
+  margin-right: -5%;
+}
+
 .background-circle {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: rgba(128, 0, 128, 0.1); /* لون أرجواني شفاف */
+  background: rgba(128, 0, 128, 0.1);
   border-radius: 50%;
   top: 90px;
   left: 100px;
-  z-index: -1; /* للخلفية خلف المحتوى */
+  z-index: -1;
 }
 
 .shap_circle {
@@ -272,7 +346,6 @@ body {
   right: 10%;
 }
 
-/* لضمان الاستجابة على الشاشات الصغيرة */
 @media (max-width: 767px) {
   .about-us-section .row {
     flex-direction: column;
@@ -341,10 +414,16 @@ body {
   position: absolute;
   width: 500px;
   height: 550px;
-  background: rgba(128, 0, 128, 0.1); /* لون أرجواني شفاف */
+  background: rgba(128, 0, 128, 0.1);
   border-radius: 50%;
   top: -315px;
   z-index: -1;
+}
+
+[dir = "ltr"] .contact-image {
+  transform: scaleX(-1);
+  margin-left: 10%;
+  margin-top: 8%;
 }
 
 .shap_circle-1 {
@@ -352,6 +431,21 @@ body {
   top: -250%;
   right: 40%;
 }
+
+[dir = "ltr"] .shap_circle-1 {
+  right: 8%;
+  top: -150%;
+}
+
+[dir = "ltr"] .shap_circle-2 {
+  left : 8%;
+  top: -150%;
+}
+
+[dir = "ltr"] .name {
+  margin-left: -15px;
+}
+
 
 .shap_circle-2 {
   position: absolute;
@@ -389,6 +483,14 @@ body {
   text-align: center;
   padding: 20px 0;
 }
+
+[dir = "ltr"] .footer {
+    display: flex;
+    justify-content: flex-end; /* لنقل العناصر إلى أقصى اليمين */
+    align-items: flex-start; /* محاذاة العناصر رأسياً */
+    padding: 20px; /* مسافة داخلية */
+}
+
 .text-link {
   color: #e6c7f6;
   font-weight: 500;
