@@ -273,6 +273,30 @@ body {
   margin-bottom: 40px;
 }
 
+@media (max-width: 767px) {
+  .about_text {
+    margin-top: 150px;
+  }
+
+  .background-circle {
+    margin-left: -13%;
+  }
+
+  .about-us-section .astronaut-img{
+    position: relative;
+    top: 100px
+  }
+
+  .about-us-section .astronaut-img .img_ltr{
+    position: relative;
+    top: 80%
+  }
+
+  .shape-container-3 {
+    display: none;
+  }
+}
+
 [dir = "ltr"] .about-us-section .about_text {
   text-align: left;
 }
@@ -307,6 +331,7 @@ body {
   color: var(--light-black);
   font-weight: 500;
 }
+
 
 [dir = "ltr"] .background-circle {
   transform: scaleX(-1);
@@ -350,12 +375,6 @@ body {
   .about-us-section .row {
     flex-direction: column;
     text-align: center;
-  }
-
-  .about-us-section .astronaut-img {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
   }
 
   .about-us-section .col-lg-6 {
